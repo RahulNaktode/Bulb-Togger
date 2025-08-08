@@ -36,3 +36,23 @@ body{
         .bulb-btn2{
             background-color: red;
         }
+
+        @media screen and (max-width: 740px){
+            .box{
+            height: 240px;
+            width: 250px;
+            margin: 130px auto;
+            padding: 60px 28px;
+            border-radius: 10px;
+        }
+
+        }
+
+        @media (min-width: 741px) and (max-width: 992px) {
+
+             .box{
+            margin: 140px auto;
+            
+        }
+
+        }
