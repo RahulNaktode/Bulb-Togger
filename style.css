@@ -29,13 +29,9 @@ body{
             font-size: larger;
             cursor: pointer;
             border: none;
-        }
-        .bulb-btn1{
-            background-color: green;
-        }
-        .bulb-btn2{
             background-color: red;
         }
+        
 
         @media screen and (max-width: 740px){
             .box{

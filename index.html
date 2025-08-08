@@ -9,38 +9,41 @@
     <div class="box" id="box1">
         <img src="bulb-off.png" alt="" class="img-bulb" id="bulb">
         <div class="btn-container">
-            <button class="btn bulb-btn1" onclick="turnon()" ondblclick="turnoff()" id="btn">ON</button>
+            <button class="btn" onclick="toggle()" id="btn">ON</button>
         </div>
     </div>
     
     <script>
-        function turnon(){
+        let isOn = false;
+
+        function toggle(){
+            isOn = !isOn;
+
             const bulbelement1 = document.getElementById("bulb");
             const headelement = document.getElementById("heading1");
             const boxelement = document.getElementById("box1");
             const bodyelement = document.getElementById("body");
             const btnelement = document.getElementById("btn");
+
+            if(isOn){
             bulbelement1.src = 'bulb-on.png';
             headelement.style.color="#ffbf00";
             boxelement.style.backgroundColor = "#ffff66";
             bodyelement.style.backgroundColor = "#ffffcc";
-            btnelement.innerText= "OFF";
-            btnelement.style.backgroundColor = "red";
-        }
-
-        function turnoff(){
-            const bulbelement1 = document.getElementById("bulb");
-            const headelement = document.getElementById("heading1");
-            const boxelement = document.getElementById("box1");
-            const bodyelement = document.getElementById("body");
+            btnelement.innerText="OFF";
+            btnelement.style.backgroundColor="green";
+            }else{
             bulbelement1.src = 'bulb-off.png';
             headelement.style.color="black";
             boxelement.style.backgroundColor = "#666666";
             bodyelement.style.backgroundColor = "#4d4d4d";
-            const btnelement = document.getElementById("btn");
-            btnelement.innerText= "ON";
-            btnelement.style.backgroundColor = "green";
+            btnelement.innerText="ON";
+            btnelement.style.backgroundColor="red";
+            }
+
+
         }
+
     </script>
 </body>
 </html>
